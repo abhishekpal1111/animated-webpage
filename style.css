@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+   /* background-color: red;*/
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#main img{
+    height:720px;
+    width: 450px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+
+}
+#scroll{
+    position: absolute;
+    top: 15%;
+    width:100%;
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+#scroll h1{
+    display: inline-block;
+    font-size:200px;
+    font-family:times;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 3px;
+    animation-name: scroll; 
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll2{
+    position: absolute;
+    top: 42%;
+    width:100%;
+    z-index: 100;
+
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll2::-webkit-scrollbar{
+    display: none;
+}
+#scroll2 h1{
+    display: inline-block;
+    font-size:200px;
+    font-family:times;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-right: 2px;
+    letter-spacing: 40px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+}
+
+#scroll3{
+    position: absolute;
+    top: 69%;
+    width:100%;
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll3::-webkit-scrollbar{
+    display: none;
+}
+#scroll3 h1{
+    display: inline-block;
+    font-size:200px;
+    font-family:times;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-right: 2px;
+    letter-spacing: 40px;
+    animation-name: scroll; 
+    animation-duration: 3s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#text{
+    font-size: 35px;
+    position: absolute;
+    font-family: monospace;
+    width: 49%;
+   /* background-color: red;*/
+    z-index: 999;
+    top: 8%;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+@keyframes scroll {
+    0% {
+        
+        transform: translateX(calc(-100% - 32px));
+
+    }
+    100%{
+        transform: translateX(0);
+        
+    }
+    
+}
